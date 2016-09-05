@@ -26,9 +26,8 @@ public class Task1 {
         int minInArray = array[0];
         int index = array.length - 1;
         while (index > 0) {
-            if (array[index] < minInArray) {
+            if (array[index] < minInArray)
                 minInArray = array[index];
-            }
             index--;
         }
         return minInArray;
@@ -38,9 +37,8 @@ public class Task1 {
         int index = 1;
         double minInArray = array[0];
         while (index < array.length) {
-            if (minInArray > array[index]) {
+            if (minInArray > array[index])
                 minInArray = array[index];
-            }
             index++;
         }
         return minInArray;
@@ -50,9 +48,8 @@ public class Task1 {
         int index = 1;
         int maxInArray = array[0];
         while (index < array.length) {
-            if (maxInArray < array[index]) {
+            if (maxInArray < array[index])
                 maxInArray = array[index];
-            }
             index++;
         }
         return maxInArray;
@@ -62,9 +59,8 @@ public class Task1 {
         double maxInArray = array[0];
         int index = 1;
         while (index < array.length) {
-            if (array[index] > maxInArray) {
+            if (array[index] > maxInArray)
                 maxInArray = array[index];
-            }
             index++;
         }
         return maxInArray;
@@ -74,9 +70,8 @@ public class Task1 {
         int index = 1;
         int maxPositiveInArray = array[0];
         while (index < array.length) {
-            if (array[index] > maxPositiveInArray && array[index] >= 0) {
+            if (array[index] > maxPositiveInArray && array[index] >= 0)
                 maxPositiveInArray = array[index];
-            }
             index++;
         }
         return maxPositiveInArray;
@@ -86,9 +81,8 @@ public class Task1 {
         int index = 1;
         double maxPositiveInArray = array[0];
         while (index < array.length) {
-            if (array[index] > maxPositiveInArray && array[index] >= 0) {
+            if (array[index] > maxPositiveInArray && array[index] >= 0)
                 maxPositiveInArray = array[index];
-            }
             index++;
         }
         return maxPositiveInArray;
@@ -116,35 +110,30 @@ public class Task1 {
 
     static int modulus(int array[]) {
         int modFirstAndLast;
-        if (array[0] == 0 || array[array.length - 1] == 0){
+        if (array[0] == 0 || array[array.length - 1] == 0)
             modFirstAndLast = 0;
-        }
-        else {
+        else
             modFirstAndLast = array[0] % array[array.length - 1];
-        }
         return modFirstAndLast;
     }
 
     static double modulus(double array[]) {
         double modFirstAndLast;
-        if (array[0] == 0 || array[array.length - 1] == 0) {
+        if (array[0] == 0 || array[array.length - 1] == 0)
             modFirstAndLast = 0;
-        }
-        else {
+        else
             modFirstAndLast = array[0] % array[array.length - 1];
-        }
         return modFirstAndLast;
     }
 
-    static int secondLargest(int array[]){
+    static int secondLargest(int array[]) {
 //      sorting array by ascending order
-        for (int mainIndex = 0; mainIndex < array.length-1; mainIndex++){
+        for (int mainIndex = 0; mainIndex < array.length-1; mainIndex++) {
             int intermediateIndex = mainIndex;
             int maxElement;
             for (int secondaryIndex = mainIndex+1; secondaryIndex < array.length; secondaryIndex++) {
-                if (array[secondaryIndex] < array[intermediateIndex]) {
+                if (array[secondaryIndex] < array[intermediateIndex])
                     intermediateIndex = secondaryIndex;
-                }
             }
 //          elements replacing block
             maxElement = array[intermediateIndex];
@@ -155,7 +144,7 @@ public class Task1 {
         return array[array.length-2];
     }
 
-    static double secondLargest(double array[]){
+    static double secondLargest(double array[]) {
 //      partially sorting array by descending order
         int mainIndex = 0;
         int secondaryIndex;
